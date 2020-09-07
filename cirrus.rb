@@ -2,16 +2,16 @@
 class Cirrus < Formula
   desc "CLI for running Cirrus Tasks locally in Docker containers"
   homepage "https://github.com/cirruslabs/cirrus-cli"
-  version "0.6.1"
+  version "0.6.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.6.1/cirrus-darwin-amd64.tar.gz"
-    sha256 "67fb38d7e96f7c6bede529beaf1d54f5c6d761af91fa63c18d2e11e7139e681a"
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.6.2/cirrus-darwin-amd64.tar.gz"
+    sha256 "29dcf69f5c2d3a37d91b68c381f52650f36d9824f5291325949ef94b647afd96"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.6.1/cirrus-linux-amd64.tar.gz"
-      sha256 "9e8d3ce84406b77bdb3beadacc7d72c0a3d719dd6d29d2e34f2a6dfc6abcc00b"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.6.2/cirrus-linux-amd64.tar.gz"
+      sha256 "f106f6982a54695ace146f1288eb2c3ffe9c9ec82f794bee06a4d5d73883cf44"
     end
   end
 
