@@ -2,26 +2,24 @@
 class Cirrus < Formula
   desc "CLI for running Cirrus Tasks locally in Docker containers"
   homepage "https://github.com/cirruslabs/cirrus-cli"
-  version "0.17.0"
+  version "0.18.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.17.0/cirrus-darwin-amd64.tar.gz"
-    sha256 "f047210a7354043d756c6ae865eb90cd028c0fb97ba850268e73d76374bcf245"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.17.0/cirrus-linux-amd64.tar.gz"
-      sha256 "5b25f9533dcbeaa9505474ee90a8dc96b667985661d3ffcfa553194b60c9edb6"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.17.0/cirrus-linux-arm64.tar.gz"
-        sha256 "db56f74a2ea8a48e91e243b690648205aa9451f3bd049e0c760143ecd7ff5286"
-      else
-        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.17.0/cirrus-linux-arm.tar.gz"
-        sha256 "29fdf8bdbe9d2b4b115c4cfbd973e4a997a8b563b219e0a7c6637902c031725f"
-      end
-    end
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.18.0/cirrus-darwin-amd64.tar.gz"
+    sha256 "8813d62ee80a9ca24cbeed133a689d2d9fe0b21ff73909b443ca02be124c325d"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.18.0/cirrus-linux-amd64.tar.gz"
+    sha256 "52fcf123bb28847a1b82c6c8d97f12cc4655c30b91d34abb7da8ceb023d9cc8b"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.18.0/cirrus-linux-arm.tar.gz"
+    sha256 "bfbd98097769f0e1076175fa658747958ac50ca7caa76f375e7b6c5a8f514a38"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.18.0/cirrus-linux-arm64.tar.gz"
+    sha256 "1e77569bce95e95dc182050066f6cf5cddb56281a9f42c86ea3f5a77b4b692ae"
   end
 
   def install
