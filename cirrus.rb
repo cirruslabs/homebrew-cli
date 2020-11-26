@@ -2,24 +2,24 @@
 class Cirrus < Formula
   desc "CLI for running Cirrus Tasks locally in Docker containers"
   homepage "https://github.com/cirruslabs/cirrus-cli"
-  version "0.19.0"
+  version "0.20.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.19.0/cirrus-darwin-amd64.tar.gz"
-    sha256 "9227a1dfa13499414c306906cd3953ea2d7beb8096279ee76e157faceac88019"
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.20.0/cirrus-darwin-amd64.tar.gz"
+    sha256 "7d273424a36928421df3909bf1bbcfab6c3f954909ae9477f56cb308c9ed0821"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.19.0/cirrus-linux-amd64.tar.gz"
-    sha256 "e11557655139051045ec9f7f550e03857cf1cb711a0cbd7c6702d1544c0e583a"
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.20.0/cirrus-linux-amd64.tar.gz"
+    sha256 "e4887a16ce4f784ecf1f8d53efccc68f0bfaf2001a850f47788ec331a963cf6c"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.19.0/cirrus-linux-arm.tar.gz"
-    sha256 "ba5bcecc5ed0e0a642a533e2737ef250f5008ca571cb0826652b4f8d0094b0e1"
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.20.0/cirrus-linux-arm.tar.gz"
+    sha256 "4719c5bd4e08034d2671af9652ba1397ae9f3816295629617d1ce9a67bf5c790"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.19.0/cirrus-linux-arm64.tar.gz"
-    sha256 "66661296cf481d5b3dbd445e7f3ebad056bac5fd8a7870cb59ca7e9a01686753"
+    url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.20.0/cirrus-linux-arm64.tar.gz"
+    sha256 "d71e5c57f4acedff9e83c9a313c5aee58c617616224938708f18b8ff6b55c13e"
   end
 
   def install
