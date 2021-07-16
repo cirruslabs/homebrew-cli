@@ -5,32 +5,32 @@
 class Cirrus < Formula
   desc "CLI for running Cirrus Tasks locally in Docker containers"
   homepage "https://github.com/cirruslabs/cirrus-cli"
-  version "0.57.0"
+  version "0.58.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.57.0/cirrus-darwin-amd64.tar.gz"
-      sha256 "9802c29cdd11c1603bbeda5b0cf225839d2902b9e06d29d3ce5163db27182d65"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.58.0/cirrus-darwin-amd64.tar.gz"
+      sha256 "a64ad44fdbb485283517eeec9251df97d6567c0acabd824d6b9874e9c9218d94"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.57.0/cirrus-darwin-arm64.tar.gz"
-      sha256 "f209ad19de82e148a4e542f8361eee142759290a7f4eab017fdb99a7b7c223fa"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.58.0/cirrus-darwin-arm64.tar.gz"
+      sha256 "d9c285b74d39e67d648ef6151eb564fda73af589abe9d9c39da34bfe99283cd1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.57.0/cirrus-linux-amd64.tar.gz"
-      sha256 "ef0291b3a0a02af0fca66bc0530d312e8ac31fca5f667bdcad2130d740f60c8c"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.58.0/cirrus-linux-amd64.tar.gz"
+      sha256 "b075c5c80c37f23797570a2e496c01422c382efa3e6f722a458a24d968e98340"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.57.0/cirrus-linux-arm.tar.gz"
-      sha256 "5561d5a4da49546d9f76fc8dd678b10b352ecfb2d64bf9bfa9af1d8f60a51f28"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.58.0/cirrus-linux-arm.tar.gz"
+      sha256 "dfc3e23c3152462e4f8aaf6ab3849f327725aacf739809a0d01deb06cc9f3da0"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.57.0/cirrus-linux-arm64.tar.gz"
-      sha256 "3db2c0c7402f9617d7685eb21ee2427f923b0df94749f8f9708afaf91cfb59fb"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.58.0/cirrus-linux-arm64.tar.gz"
+      sha256 "430ae624d4ce42e840e06f0868055e925561e1211f6999d34f173dde55682fbb"
     end
   end
 
