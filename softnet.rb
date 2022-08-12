@@ -5,13 +5,13 @@
 class Softnet < Formula
   desc "Software networking with isolation for Tart"
   homepage "https://github.com/cirruslabs/softnet"
-  version "0.1.0"
+  version "0.2.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/softnet/releases/download/0.1.0/softnet.tar.gz"
-      sha256 "c4608be1279fe796b36b26a1f7e2321d60ecb15fca832789c894f51cf519632e"
+      url "https://github.com/cirruslabs/softnet/releases/download/0.2.0/softnet.tar.gz"
+      sha256 "ecc5ee127cd32223f52e0e4c39c16a380bcb78ecc55e96e66703ac41b937206d"
 
       def install
         bin.install "softnet"
