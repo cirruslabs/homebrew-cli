@@ -5,15 +5,15 @@
 class Tart < Formula
   desc "Run macOS VMs on Apple Silicon"
   homepage "https://github.com/cirruslabs/tart"
-  version "0.32.0"
+  version "0.32.1"
 
   depends_on "cirruslabs/cli/softnet"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/tart/releases/download/0.32.0/tart.tar.gz"
-      sha256 "693c3470ef1994546f9a94f2b7d8a60cc4e22b27001fefa91f87ee708ba27ced"
+      url "https://github.com/cirruslabs/tart/releases/download/0.32.1/tart.tar.gz"
+      sha256 "dee5ac9bd2216410e65eb371cd7a7ec18dfa4e48061184b046e2eccc8da186c1"
 
       def install
         bin.install "tart"
