@@ -5,7 +5,7 @@
 class Tart < Formula
   desc "Run macOS VMs on Apple Silicon"
   homepage "https://github.com/cirruslabs/tart"
-  version "0.37.2"
+  version "0.38.0"
   license "AGPL-3.0"
 
   depends_on "cirruslabs/cli/softnet"
@@ -13,8 +13,8 @@ class Tart < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/tart/releases/download/0.37.2/tart.tar.gz"
-      sha256 "d25868a9143cbc353822d63801840a4d9eff517f022a276ba5b4f8dca4c9bf1c"
+      url "https://github.com/cirruslabs/tart/releases/download/0.38.0/tart.tar.gz"
+      sha256 "0870ca88e53c92f61372288af4a4caaac40cc23358fd82006e9ab9f63b3eac0a"
 
       def install
         bin.install "tart"
@@ -28,12 +28,6 @@ class Tart < Formula
     unless Hardware::CPU.arm?
       odie "Tart only works on Apple Silicon!"
     end
-  end
-
-  def post_install
-    ENV["SENTRY_DSN"] = "https://606fab64ced94f0991109ac5467e23da@o4504250314522624.ingest.sentry.io/4504606552424448"
-    system "#{bin}/tart report-installation"
-    ENV.delete("SENTRY_DSN")
   end
 
   def caveats
