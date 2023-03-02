@@ -17,6 +17,7 @@ class Bart < Formula
       sha256 "0870ca88e53c92f61372288af4a4caaac40cc23358fd82006e9ab9f63b3eac0a"
 
       def install
+        mkdir_p libexec/"tart.app/Contents/MacOS/"
         libexec.install "tart" => "tart.app/Contents/MacOS/tart"
         bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
       end
