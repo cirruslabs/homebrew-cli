@@ -14,7 +14,7 @@ class Tart < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/cirruslabs/tart/releases/download/1.3.0/tart.tar.gz"
-      sha256 "b256c7622d4adb8867225d16e4d3b40dd8b626c01a9eddbf088626d136db08eb"
+      sha256 "80597920f5065584ecb33b644be041bf2546d56713280b900792526392ebd213"
 
       def install
         libexec.install Dir["*"]
