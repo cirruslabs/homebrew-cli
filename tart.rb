@@ -5,7 +5,7 @@
 class Tart < Formula
   desc "Run macOS VMs on Apple Silicon"
   homepage "https://github.com/cirruslabs/tart"
-  version "1.4.1"
+  version "1.4.2"
   license "Fair Source"
 
   depends_on "cirruslabs/cli/softnet"
@@ -13,8 +13,8 @@ class Tart < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/tart/releases/download/1.4.1/tart.tar.gz"
-      sha256 "b5776d75b5aaa3a6257ea47b573450ceaf50e1fbaf3d35163ff0bc4529be621d"
+      url "https://github.com/cirruslabs/tart/releases/download/1.4.2/tart.tar.gz"
+      sha256 "5e174f15aba2657b161c553346614725c26bc5bc0bf2436de816ab1ad2d2a46a"
 
       def install
         libexec.install Dir["*"]
