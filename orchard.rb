@@ -5,20 +5,20 @@
 class Orchard < Formula
   desc "Orchestrator for running Tart Virtual Machines on a cluster of Apple Silicon devices"
   homepage "https://github.com/cirruslabs/orchard"
-  version "0.13.0"
+  version "0.13.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.13.0/orchard-darwin-arm64.tar.gz"
-      sha256 "2c13ed0476d375de7490c7d32edbbdfeb358fb79f3ae96831856226a097ebe91"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.13.1/orchard-darwin-arm64.tar.gz"
+      sha256 "f025d3dabd1569f7a5d42a81edf9c74b701817f88f472f13ba84f1d9e4f5f3cf"
 
       def install
         bin.install "orchard"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.13.0/orchard-darwin-amd64.tar.gz"
-      sha256 "3b9494b4169832a274350814f0633d181ca6016331d4675a0a7e99b666918eef"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.13.1/orchard-darwin-amd64.tar.gz"
+      sha256 "e7375bfc1240f06a3c3925341543408569658e794c7924f50b5792d309ab9ca5"
 
       def install
         bin.install "orchard"
@@ -28,16 +28,16 @@ class Orchard < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.13.0/orchard-linux-arm64.tar.gz"
-      sha256 "882c55afe4036dc0d93bafe87d0f76b014d55a394d10df71100d0503f0b91b98"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.13.1/orchard-linux-arm64.tar.gz"
+      sha256 "815d788debb71bf92b6ad3345eaa51fd14572087de3fce657fa7e3c6816a23a5"
 
       def install
         bin.install "orchard"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.13.0/orchard-linux-amd64.tar.gz"
-      sha256 "7adc4e44041694358fab1be5b02f871831aace8649d34cf1569da4e7228a2821"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.13.1/orchard-linux-amd64.tar.gz"
+      sha256 "45ff86ebbee75e25eb781801efb075d1ee676c3e49a18fb6822418bb4280a93a"
 
       def install
         bin.install "orchard"
