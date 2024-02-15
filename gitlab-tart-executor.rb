@@ -5,14 +5,14 @@
 class GitlabTartExecutor < Formula
   desc "GitLab Runner Executor to run jobs inside isolated Tart VMs"
   homepage "https://github.com/cirruslabs/gitlab-tart-executor"
-  version "1.10.0"
+  version "1.11.0"
 
   depends_on "cirruslabs/cli/tart"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/cirruslabs/gitlab-tart-executor/releases/download/1.10.0/gitlab-tart-executor-darwin-arm64.tar.gz"
-    sha256 "d5797fbc3993d5538c97421ca04d8c5ed56616d504c14105b2268e416a20e7b0"
+    url "https://github.com/cirruslabs/gitlab-tart-executor/releases/download/1.11.0/gitlab-tart-executor-darwin-arm64.tar.gz"
+    sha256 "9d6a5fa6fd7b75e5ec6846166bfaec285fcc53be9dcd7c417a2a398b232842ab"
 
     def install
       bin.install "gitlab-tart-executor"
