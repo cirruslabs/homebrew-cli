@@ -13,7 +13,7 @@ class Tart < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/cirruslabs/tart/releases/download/2.8.1/tart-arm64.tar.gz"
-    sha256 "9bc12cce1bdf9b196a5d49984e41579a72bfab3868ef491a0774132ee366a81e"
+    sha256 "bfead3164d266324efa5fa133eff4b30ee29654a524dfa93e1836f1a406ed539"
 
     def install
       libexec.install Dir["*"]
@@ -23,7 +23,7 @@ class Tart < Formula
   end
   if Hardware::CPU.intel?
     url "https://github.com/cirruslabs/tart/releases/download/2.8.1/tart-amd64.tar.gz"
-    sha256 "07a7b6f68793a3ca86300d2b77a3e3ede51e875c6c9d92750cdc37cc06f107f2"
+    sha256 "b737c07f50b9d5b9a954266906c99ceb82268f3366ddce186a0ba6eef1892572"
 
     def install
       libexec.install Dir["*"]
