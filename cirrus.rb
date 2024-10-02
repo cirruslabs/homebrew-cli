@@ -5,13 +5,13 @@
 class Cirrus < Formula
   desc ""
   homepage ""
-  version "0.128.0"
+  version "0.129.0"
   license "AGPL-3.0-only"
 
   on_macos do
     on_intel do
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.128.0/cirrus-darwin-amd64.tar.gz"
-      sha256 "f10708cc3bb55c0a4d8167b69ce8292c10298bf926daa4e991e758bc784000ee"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.129.0/cirrus-darwin-amd64.tar.gz"
+      sha256 "2feb855dca6dd81ff1b3f071dd2fd948720042c3a35d60f4b42162f220c5eb23"
 
       def install
         bin.install "cirrus"
@@ -19,8 +19,8 @@ class Cirrus < Formula
       end
     end
     on_arm do
-      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.128.0/cirrus-darwin-arm64.tar.gz"
-      sha256 "35a8343ed4f0de31e3d1f0d34dacc52a3c929035a71ad02a88dc12c8529bcb4b"
+      url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.129.0/cirrus-darwin-arm64.tar.gz"
+      sha256 "80d10c2d52bcef771f32c7caf03010b4ef372252a3d44caa443e1931c828beac"
 
       def install
         bin.install "cirrus"
@@ -32,8 +32,8 @@ class Cirrus < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.128.0/cirrus-linux-amd64.tar.gz"
-        sha256 "9e9d55a146b128a9a898e64b733de61f74799b05b93dbfc30f8d014cbe9ba284"
+        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.129.0/cirrus-linux-amd64.tar.gz"
+        sha256 "8c0fefb3490d5570fa087ae0056162d607de276ff2008349c0ac54dffa10ec3b"
 
         def install
           bin.install "cirrus"
@@ -43,8 +43,8 @@ class Cirrus < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.128.0/cirrus-linux-arm.tar.gz"
-        sha256 "49b0e897669cc64947d677d03d7e432cafeb904116d702a69b20d904ff25e359"
+        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.129.0/cirrus-linux-arm.tar.gz"
+        sha256 "5e23480a7d52c932478f30589282a169cea0dad758fceaaf10b8074970a935e1"
 
         def install
           bin.install "cirrus"
@@ -54,8 +54,8 @@ class Cirrus < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.128.0/cirrus-linux-arm64.tar.gz"
-        sha256 "b9c77fa86cc9c2bc58cf7bfe379a08ad5894b3bdc5ef25d9198a85c6e72ce577"
+        url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.129.0/cirrus-linux-arm64.tar.gz"
+        sha256 "900931a0d48c2f8cce06bc16e9d198e019f1a0e99e271bf7ccc9810f31f5bf90"
 
         def install
           bin.install "cirrus"
