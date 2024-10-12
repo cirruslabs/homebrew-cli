@@ -1,8 +1,8 @@
 class OtelcolContrib < Formula
   desc "OpenTelemetry Collector (contrib distribution)"
   homepage "https://opentelemetry.io/docs/collector/"
-  url "https://github.com/open-telemetry/opentelemetry-collector-releases/archive/refs/tags/v0.92.0.tar.gz"
-  sha256 "1d1337870014a2e06e2edebf9381448fe0841758148e620a6e934cfbb3618e55"
+  url "https://github.com/open-telemetry/opentelemetry-collector-releases/archive/refs/tags/v0.111.0.tar.gz"
+  sha256 "a4ba074a3be0399279d9bcc0555bea48790b3b93db66b4721024890f253bf957"
   license "Apache-2.0"
   head "https://github.com/open-telemetry/opentelemetry-collector-releases.git", branch: "main"
 
