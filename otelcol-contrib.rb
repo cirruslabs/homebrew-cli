@@ -1,17 +1,18 @@
 class OtelcolContrib < Formula
-  desc "OpenTelemetry Collector (contrib distribution)"
+  desc "OpenTelemetry Collector (binary contrib distribution)"
   homepage "https://opentelemetry.io/docs/collector/"
-  url "https://github.com/open-telemetry/opentelemetry-collector-releases/archive/refs/tags/v0.111.0.tar.gz"
-  sha256 "a4ba074a3be0399279d9bcc0555bea48790b3b93db66b4721024890f253bf957"
   license "Apache-2.0"
-  head "https://github.com/open-telemetry/opentelemetry-collector-releases.git", branch: "main"
 
-  depends_on "go" => :build
+  if Hardware::CPU.intel?
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.111.0/otelcol-contrib_0.111.0_darwin_amd64.tar.gz"
+    sha256 "c00024fd85008e265db7238b019732935475604aad5457772913643db0c707bd"
+  else
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.111.0/otelcol-contrib_0.111.0_darwin_arm64.tar.gz"
+    sha256 "e56bf2cb535b6c089915415d2ab5e477c98628d03f3376aaf9124fa4f8b24f97"
+  end
 
   def install
-    ENV["distributions"] = "otelcol-contrib"
-    system "make", "build"
-    bin.install "distributions/otelcol-contrib/_build/otelcol-contrib" => "otelcol-contrib"
+    bin.install "otelcol-contrib"
   end
 
   test do
