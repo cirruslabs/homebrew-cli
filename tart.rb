@@ -5,7 +5,7 @@
 class Tart < Formula
   desc "Run macOS and Linux VMs on Apple Hardware"
   homepage "https://github.com/cirruslabs/tart"
-  version "2.21.0"
+  version "2.22.1"
   license "Fair Source"
 
   depends_on "cirruslabs/cli/softnet"
