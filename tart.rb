@@ -5,38 +5,31 @@
 class Tart < Formula
   desc "Run macOS and Linux VMs on Apple Hardware"
   homepage "https://github.com/cirruslabs/tart"
-  version "2.23.0"
+  version "2.24.0"
   license "Fair Source"
 
   depends_on "cirruslabs/cli/softnet"
   depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/cirruslabs/tart/releases/download/2.23.0/tart-amd64.tar.gz"
-    sha256 "5759a7c6bcc80ab1789f73dac5b95d2400a37c408efa0f392d1621a6c717ea01"
+  url "https://github.com/cirruslabs/tart/releases/download/2.24.0/tart.tar.gz"
+  sha256 "e46067e63593dddfcf89d56f99681fc464ee93bd9a9fa59bb51b51ff95c73b39"
 
-    def install
-      libexec.install Dir["*"]
-      bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
-      generate_completions_from_executable(libexec/"tart.app/Contents/MacOS/tart", "--generate-completion-script")
-    end
-  end
-  if Hardware::CPU.arm?
-    url "https://github.com/cirruslabs/tart/releases/download/2.23.0/tart-arm64.tar.gz"
-    sha256 "ea6bb287d6a7d06097e2337c063145791a5265411003b752cb11559fac3032b2"
-
-    def install
-      libexec.install Dir["*"]
-      bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
-      generate_completions_from_executable(libexec/"tart.app/Contents/MacOS/tart", "--generate-completion-script")
-    end
+  def install
+    libexec.install Dir["*"]
+    bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
+    generate_completions_from_executable(libexec/"tart.app/Contents/MacOS/tart", "--generate-completion-script")
   end
 
   depends_on :macos => :ventura
 
   def caveats
     <<~EOS
-      See the GitHub repository for more information
+      Tart has been installed. You might want to reduce the default DHCP lease time
+      from 86,400 to 600 seconds to avoid DHCP shortage when running lots of VMs daily:
+
+        sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.InternetSharing.default.plist bootpd -dict DHCPLeaseTimeSecs -int 600
+
+      See https://tart.run/faq/#changing-the-default-dhcp-lease-time for more details.
     EOS
   end
 end
