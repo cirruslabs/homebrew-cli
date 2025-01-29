@@ -11,7 +11,7 @@ class Cirrus < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.136.0/cirrus-darwin-amd64.tar.gz"
-      sha256 "8b507a4a52b463c64140431db9c903b000b6db0a9e1ff0e5aa66d5d01cd72a82"
+      sha256 "a95b68cc67cc9673c8f57b4e7a2fbf378dc4c3847681c097b6218cadbc70862f"
 
       def install
         bin.install "cirrus"
@@ -20,7 +20,7 @@ class Cirrus < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.136.0/cirrus-darwin-arm64.tar.gz"
-      sha256 "029aa0f91e7c8630e91c9c094ed6385715f61b8eaf662b52fc28942fd540e3a8"
+      sha256 "6e16dea303da5e57a16c061572472b52af8b9ea98a0dade90b3b2a1aafc7c774"
 
       def install
         bin.install "cirrus"
@@ -33,7 +33,7 @@ class Cirrus < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.136.0/cirrus-linux-amd64.tar.gz"
-        sha256 "b50ac4ea6de801a08736a34fe3107de59ebf302fe84e6563d487e59f2557b390"
+        sha256 "3ce70d5d0c1884780b54c70076f819fe4e0b58b90da2db9a6447bb8e345947a8"
 
         def install
           bin.install "cirrus"
@@ -44,7 +44,7 @@ class Cirrus < Formula
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.136.0/cirrus-linux-arm.tar.gz"
-        sha256 "963cb8682cb494a7119a1f1985aef029a36c9a57c9b65a48ecd381a867fa1d9b"
+        sha256 "59c8a1a3693697f8fe9e64f2c00f06c58b63bc2e490155a7d411e15fd776ec16"
 
         def install
           bin.install "cirrus"
@@ -55,7 +55,7 @@ class Cirrus < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/cirrus-cli/releases/download/v0.136.0/cirrus-linux-arm64.tar.gz"
-        sha256 "f9a2d87817f5ec60066ec6a3abc56f316e3e94386dd1473dafad91c101e9a8ac"
+        sha256 "124a240ebb315539f4d3562625b954df8eb990449da2f304429b17dd17008b5d"
 
         def install
           bin.install "cirrus"
