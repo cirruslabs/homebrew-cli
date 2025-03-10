@@ -5,21 +5,21 @@
 class Chacha < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
   license "FSL-1.1-Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.2.0/chacha-darwin-amd64.tar.gz"
-      sha256 "221b2921e18662d5cfbce1bcc6f6ed9966490a7cebfcca44d72facf23730116c"
+    if Hardware::CPU.intel?
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.3.0/chacha-darwin-amd64.tar.gz"
+      sha256 "142623c6a327e93f22190d5c279af128c5e88b0f247ae2749010871805ac5546"
 
       def install
         bin.install "chacha"
       end
     end
-    on_arm do
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.2.0/chacha-darwin-arm64.tar.gz"
-      sha256 "206d54306e1d4eed98a06ef3c42dd9153d8fb7d6a26665187b2777c06517ec6c"
+    if Hardware::CPU.arm?
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.3.0/chacha-darwin-arm64.tar.gz"
+      sha256 "ddbe61f080acc78a159d630f7739fd0b070c1e88385757b0dfd2847e24b2159b"
 
       def install
         bin.install "chacha"
@@ -28,20 +28,20 @@ class Chacha < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/chacha/releases/download/v0.2.0/chacha-linux-amd64.tar.gz"
-        sha256 "4b5864cb9a63e68c727a81153e1c51fafec69288b5f0b3e889756fb8a3a1a9bf"
+        url "https://github.com/cirruslabs/chacha/releases/download/v0.3.0/chacha-linux-amd64.tar.gz"
+        sha256 "7a87dda242d1fd0eb6e2c86087b067424db3e408a32b5eeb084cdfe45454f821"
 
         def install
           bin.install "chacha"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/chacha/releases/download/v0.2.0/chacha-linux-arm64.tar.gz"
-        sha256 "b2b2f4ea5aa10b2c52444cb03566398d4c6a7f95ad321b72d25c8db93d7f0993"
+        url "https://github.com/cirruslabs/chacha/releases/download/v0.3.0/chacha-linux-arm64.tar.gz"
+        sha256 "8583e5518382deaa37731cb76c38fc20757307d3b670099b736495666bcab9ed"
 
         def install
           bin.install "chacha"
