@@ -5,21 +5,21 @@
 class Chacha < Formula
   desc ""
   homepage ""
-  version "0.7.0"
+  version "0.8.0"
   license "FSL-1.1-Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.7.0/chacha-darwin-amd64.tar.gz"
-      sha256 "d4c993b1291e35ade2f0eda15a22e0f0243e62eb508a29c62a7181b10e8680da"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.8.0/chacha-darwin-amd64.tar.gz"
+      sha256 "026f675f206a9e9717956d1926272f3c12ccd5cd3310678663bb09c04e1fdf10"
 
       def install
         bin.install "chacha"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.7.0/chacha-darwin-arm64.tar.gz"
-      sha256 "e20f3db9cc66bf5874c51a04722ca6bcb4d2d94d0fb434950f738b3e9cd96cfc"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.8.0/chacha-darwin-arm64.tar.gz"
+      sha256 "74878a0739ffd6822df46912fb441012452930f02a109ea287ba30ea06544588"
 
       def install
         bin.install "chacha"
@@ -30,8 +30,8 @@ class Chacha < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/chacha/releases/download/v0.7.0/chacha-linux-amd64.tar.gz"
-        sha256 "6b0976d67435a8c923313c334e1b072ff0ffbd83e6de886567b47f0f9ed2af44"
+        url "https://github.com/cirruslabs/chacha/releases/download/v0.8.0/chacha-linux-amd64.tar.gz"
+        sha256 "e4030161c6961f8d58ff6dc588b03a8f83b84a7d8f96ba3df97195791a93378f"
 
         def install
           bin.install "chacha"
@@ -40,8 +40,8 @@ class Chacha < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cirruslabs/chacha/releases/download/v0.7.0/chacha-linux-arm64.tar.gz"
-        sha256 "e048c44151986b38da3d0b51a0d7fa402008e00f01cdb61aaa3818657cde64d6"
+        url "https://github.com/cirruslabs/chacha/releases/download/v0.8.0/chacha-linux-arm64.tar.gz"
+        sha256 "2000dc1a0456229471192519fa17fb2a115b4550a033d56a77934edbc73087d1"
 
         def install
           bin.install "chacha"
