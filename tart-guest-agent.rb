@@ -11,18 +11,18 @@ class TartGuestAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.1.0/tart-guest-agent-darwin-amd64"
-      sha256 "737eaec1d9b7d2cd10f974b036cca0011da28ec7fc8e59a9c76a172c1046180f"
+      sha256 "5ec9ea736b9f46cd4ca7f61e8f8af343a6694105e8c0a5e5dc041298e8869811"
 
       def install
-        bin.install "tart-guest-agent"
+        bin.install "tart-guest-agent-darwin-amd64" => "tart-guest-agent"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.1.0/tart-guest-agent-darwin-arm64"
-      sha256 "52a9be826bcce1993b6c0e96a374d2d6b2880c192808e18a5b41bb3aa37498e6"
+      sha256 "05b2150017102b691ef3dbfb8785d6cbbc978c5fe5fde4b71115b7e6875be547"
 
       def install
-        bin.install "tart-guest-agent"
+        bin.install "tart-guest-agent-darwin-arm64" => "tart-guest-agent"
       end
     end
   end
@@ -31,20 +31,20 @@ class TartGuestAgent < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.1.0/tart-guest-agent-linux-amd64"
-        sha256 "d6e2e9075e23d6876e4b3e06683d9e29913135af3c6a388560c2bcc80ad16d45"
+        sha256 "985c73f6f873649d30e4baf4dd21480a38a777633f7fdd63f7c8b3f4a3e68c92"
 
         def install
-          bin.install "tart-guest-agent"
+          bin.install "tart-guest-agent-linux-amd64" => "tart-guest-agent"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.1.0/tart-guest-agent-linux-arm64"
-        sha256 "ef5e757a384f4c28d1a4e9e90176d1565d36e35f743a914c00c8a2439f695c49"
+        sha256 "36f2de428d942e82adfe5c7b27153d22ee8ccb3e2fa9110eeb9ee4ce220f16a5"
 
         def install
-          bin.install "tart-guest-agent"
+          bin.install "tart-guest-agent-linux-arm64" => "tart-guest-agent"
         end
       end
     end
