@@ -4,11 +4,11 @@ class OtelcolContrib < Formula
   license "Apache-2.0"
 
   if Hardware::CPU.intel?
-    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.111.0/otelcol-contrib_0.111.0_darwin_amd64.tar.gz"
-    sha256 "c00024fd85008e265db7238b019732935475604aad5457772913643db0c707bd"
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.125.0/otelcol-contrib_0.125.0_darwin_amd64.tar.gz"
+    sha256 "988289ec5563e971aa076495d9cac0d3d964c70ef039f135d57de9f4cfb25ff6"
   else
-    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.111.0/otelcol-contrib_0.111.0_darwin_arm64.tar.gz"
-    sha256 "e56bf2cb535b6c089915415d2ab5e477c98628d03f3376aaf9124fa4f8b24f97"
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.125.0/otelcol-contrib_0.125.0_darwin_arm64.tar.gz"
+    sha256 "5498c95f742e687391ad692edc4414ea921b7104c3fa7ac13b60f602699ba9c8"
   end
 
   def install
@@ -24,13 +24,13 @@ class OtelcolContrib < Formula
           protocols:
             http:
       exporters:
-        logging:
+        debug:
           verbosity: detailed
       service:
         pipelines:
           metrics:
             receivers: [otlp]
-            exporters: [logging]
+            exporters: [debug]
     EOF
 
     fork do
