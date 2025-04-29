@@ -11,7 +11,7 @@ class TartGuestAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.2.1/tart-guest-agent-darwin-amd64"
-      sha256 "bcfd733022881b28fd0feed8ae59e4c345344f7c8429d7a26895bc911b39aff5"
+      sha256 "da727a91529509d3b5c1241cbd43445a7bb7ef68f5e551915f286836cc0fa572"
 
       def install
         bin.install "tart-guest-agent-darwin-amd64" => "tart-guest-agent"
@@ -19,7 +19,7 @@ class TartGuestAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.2.1/tart-guest-agent-darwin-arm64"
-      sha256 "f577eb7bbf4b6f2e693751b3309628c99d3e4b232b54fdd3ce19a43819a1086d"
+      sha256 "3a213360916df310c09f7efc8f1a480f61476de512b1281a8abb28ffd8421f3c"
 
       def install
         bin.install "tart-guest-agent-darwin-arm64" => "tart-guest-agent"
@@ -31,7 +31,7 @@ class TartGuestAgent < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.2.1/tart-guest-agent-linux-amd64"
-        sha256 "53cabc77fd7f78440010d76c3c85f43f78ec72291f416031fa52585d63d24b0f"
+        sha256 "4be9beff044d7c51194c7bc27a448fb05fa9033e37bbf2cc70d1ebc8bd700d40"
 
         def install
           bin.install "tart-guest-agent-linux-amd64" => "tart-guest-agent"
@@ -41,7 +41,7 @@ class TartGuestAgent < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.2.1/tart-guest-agent-linux-arm64"
-        sha256 "8ee6161abd7e3a38b4e4899a229e642838cfc7da5727dd24d934a4194152b52e"
+        sha256 "0069827bd12f04a12300e904b495f0c439d09f4e3bdb1d018abf788869f4b468"
 
         def install
           bin.install "tart-guest-agent-linux-arm64" => "tart-guest-agent"
