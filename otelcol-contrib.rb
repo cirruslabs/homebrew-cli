@@ -24,13 +24,13 @@ class OtelcolContrib < Formula
           protocols:
             http:
       exporters:
-        logging:
+        debug:
           verbosity: detailed
       service:
         pipelines:
           metrics:
             receivers: [otlp]
-            exporters: [logging]
+            exporters: [debug]
     EOF
 
     fork do
