@@ -5,12 +5,12 @@
 class Orchard < Formula
   desc "Orchestrator for running Tart Virtual Machines on a cluster of Apple Silicon devices"
   homepage "https://github.com/cirruslabs/orchard"
-  version "0.33.2"
+  version "0.33.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.33.2/orchard-darwin-amd64.tar.gz"
-      sha256 "0e4246e663c55a7f3c38f461c0d2acd3f5e82c7502cf5909746bb759a261102d"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.33.3/orchard-darwin-amd64.tar.gz"
+      sha256 "2c36f3e874d75e54a1c9530c19da28ee830683381c087805e1e183d9ab65e6b5"
 
       def install
         bin.install "orchard"
@@ -18,8 +18,8 @@ class Orchard < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.33.2/orchard-darwin-arm64.tar.gz"
-      sha256 "58b440ab9e4e8c760ff623148c0a7fc4df27a4a5a61712e4b1e513179e8ff8f2"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.33.3/orchard-darwin-arm64.tar.gz"
+      sha256 "09190630ec2561a4326b25ea6be2fd36c562a87e13997f99df0ac43bda6fd4b3"
 
       def install
         bin.install "orchard"
@@ -30,16 +30,16 @@ class Orchard < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.33.2/orchard-linux-amd64.tar.gz"
-      sha256 "6b20df4192f3a6fb7976a2a5629f29ffa4d965354fc274a4f6ec56d8b05370fc"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.33.3/orchard-linux-amd64.tar.gz"
+      sha256 "dd5500b010eebf350015ce9619b31fd995d7f97431feceb43c847ed14a7046e8"
       def install
         bin.install "orchard"
         generate_completions_from_executable(bin/"orchard", "completion")
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/orchard/releases/download/0.33.2/orchard-linux-arm64.tar.gz"
-      sha256 "1534e011376e0342c6c7608bc0e7eb460f7f5fe9c05adbe3d4032b4f87673808"
+      url "https://github.com/cirruslabs/orchard/releases/download/0.33.3/orchard-linux-arm64.tar.gz"
+      sha256 "88d5c5cfbe49b66485716d97970884bf8d9edb34b3c7fed06e0ab94d484d1d9e"
       def install
         bin.install "orchard"
         generate_completions_from_executable(bin/"orchard", "completion")
