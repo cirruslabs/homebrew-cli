@@ -2,6 +2,7 @@ class OtelcolContrib < Formula
   desc "OpenTelemetry Collector (binary contrib distribution)"
   homepage "https://opentelemetry.io/docs/collector/"
   license "Apache-2.0"
+  version "0.129.1"
 
   if Hardware::CPU.intel?
     url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.129.1/otelcol-contrib_0.129.1_darwin_amd64.tar.gz"
