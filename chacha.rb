@@ -5,21 +5,21 @@
 class Chacha < Formula
   desc ""
   homepage ""
-  version "0.16.2"
+  version "0.16.3"
   license "FSL-1.1-Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.2/chacha-darwin-amd64.tar.gz"
-      sha256 "6593c9c79921b93991a2fea9f75305a9664befef342cd0ba71c47225ecbb3aa9"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.3/chacha-darwin-amd64.tar.gz"
+      sha256 "e45b3a037bc4ef2a7d8a866d5a00c6d82923eafe7b107a41dc1ac45d4f78d759"
 
       def install
         bin.install "chacha"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.2/chacha-darwin-arm64.tar.gz"
-      sha256 "bba65f087dd96cc035ea046d635e4266b3b964a38c84d73f087bd78be4eebc87"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.3/chacha-darwin-arm64.tar.gz"
+      sha256 "3183aca8888bc3758d2205c85ea4cb0fa609d3ed21464b3f7bde58a6da676cc1"
 
       def install
         bin.install "chacha"
@@ -29,15 +29,15 @@ class Chacha < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.2/chacha-linux-amd64.tar.gz"
-      sha256 "6ad8138254eab365fc7c79917ae63097e4cd180f03b1779e8ca4efc4e8a56c54"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.3/chacha-linux-amd64.tar.gz"
+      sha256 "7239ae8c45e5143632601d24d25e595ec8002656936e80a28ff631f880d12faa"
       def install
         bin.install "chacha"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.2/chacha-linux-arm64.tar.gz"
-      sha256 "b11e1b7440f790834a8571c1a351cdd4cebd855696f0f119f7793558edf52161"
+      url "https://github.com/cirruslabs/chacha/releases/download/v0.16.3/chacha-linux-arm64.tar.gz"
+      sha256 "045ee59be7b25e8805c95234d58478bf552e9519852ccb16eb6c42e5c68c4c70"
       def install
         bin.install "chacha"
       end
