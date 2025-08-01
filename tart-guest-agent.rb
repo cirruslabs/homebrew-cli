@@ -5,12 +5,12 @@
 class TartGuestAgent < Formula
   desc "Guest agent for Tart VMs"
   homepage "https://github.com/cirruslabs/tart-guest-agent"
-  version "0.5.1"
+  version "0.6.0"
   license "FSL-1.1-Apache-2.0"
 
   on_macos do
-    url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.5.1/tart-guest-agent-darwin-all.tar.gz"
-    sha256 "f4acc6a0bf7f7229d252c8f88bf8588e6de2e7970f1be2471a7276dfd6dfb45d"
+    url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.6.0/tart-guest-agent-darwin-all.tar.gz"
+    sha256 "dfdbf06dc49b4ce3c35f690838c284ceb61f13f775a8e06e7b4c0b685229d896"
 
     def install
       bin.install "tart-guest-agent"
@@ -19,15 +19,15 @@ class TartGuestAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.5.1/tart-guest-agent-linux-amd64.tar.gz"
-      sha256 "603af755fef2217ed886103e5a7e8d9e606f83165dff97653c4ed9158c9840d1"
+      url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.6.0/tart-guest-agent-linux-amd64.tar.gz"
+      sha256 "0de15646b89386577f0fcde8d1c873aa2e1c36fff29d29632ec730daa1ca3f74"
       def install
         bin.install "tart-guest-agent"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.5.1/tart-guest-agent-linux-arm64.tar.gz"
-      sha256 "4b619e09f70921c163c3c1befdd28412bf366decdaacab121b514072c99553e2"
+      url "https://github.com/cirruslabs/tart-guest-agent/releases/download/v0.6.0/tart-guest-agent-linux-arm64.tar.gz"
+      sha256 "ac236a56e24569934aa8d04b32884a8bbea00e4ae8f37d95c30e663c288022cd"
       def install
         bin.install "tart-guest-agent"
       end
