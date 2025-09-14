@@ -12,7 +12,7 @@ class Tart < Formula
   depends_on :macos
 
   url "https://github.com/cirruslabs/tart/releases/download/2.28.4/tart.tar.gz"
-  sha256 "252e3ea472d4b0fd4eb15d1a019ef8c8716d36f2b160c7ab43a4bb655ac86d9c"
+  sha256 "bac9b5d45550ffcf6d89cc04ed085381d89575c7e50afa0d61d445688d4b3328"
 
   def install
     libexec.install Dir["*"]
