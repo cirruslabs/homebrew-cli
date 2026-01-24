@@ -5,14 +5,14 @@
 class Tart < Formula
   desc "Run macOS and Linux VMs on Apple Hardware"
   homepage "https://github.com/cirruslabs/tart"
-  version "2.30.2"
+  version "2.30.3"
   license "Fair Source"
 
   depends_on "cirruslabs/cli/softnet"
   depends_on :macos
 
-  url "https://github.com/cirruslabs/tart/releases/download/2.30.2/tart.tar.gz"
-  sha256 "9ddc01a9ebdebb8aeb27e1993ed7b0e2a6cc0aadd9ee807865e0ded3ca2a5162"
+  url "https://github.com/cirruslabs/tart/releases/download/2.30.3/tart.tar.gz"
+  sha256 "755f96c6363775517ba05a5434fc959369d6ba96e7e3874e7dffd9e9352a3e4b"
 
   def install
     libexec.install Dir["*"]
