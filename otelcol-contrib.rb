@@ -2,14 +2,14 @@ class OtelcolContrib < Formula
   desc "OpenTelemetry Collector (binary contrib distribution)"
   homepage "https://opentelemetry.io/docs/collector/"
   license "Apache-2.0"
-  version "0.129.1"
+  version "0.144.0"
 
   if Hardware::CPU.intel?
-    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.129.1/otelcol-contrib_0.129.1_darwin_amd64.tar.gz"
-    sha256 "ebacdb322c1a9adab9b1bc9d118f1a25278df30419a45ce345bbf05c77c680ba"
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.144.0/otelcol-contrib_0.144.0_darwin_amd64.tar.gz"
+    sha256 "0de9275b11bf6285648470fb8efec5612cb422f495df7a3fef93cd8cd647ed0e"
   else
-    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.129.1/otelcol-contrib_0.129.1_darwin_arm64.tar.gz"
-    sha256 "bd5c2acb501d525da72a55136894a619e3539026640368ff8249d5829cd51f21"
+    url "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.144.0/otelcol-contrib_0.144.0_darwin_arm64.tar.gz"
+    sha256 "605cdc88c65b23d7e0c373d56a1f411da427a978567ab186050a27791f7779b0"
   end
 
   def install
