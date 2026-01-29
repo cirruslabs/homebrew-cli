@@ -5,21 +5,21 @@
 class OmniCache < Formula
   desc ""
   homepage ""
-  version "0.7.0"
+  version "0.8.0"
   license "FSL-1.1-ALv2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.7.0/omni-cache-darwin-amd64.tar.gz"
-      sha256 "b500f59f7cbbf58d5e8a465e8afa7c655a72f10afc72d5fe03d2edc5c05f310f"
+      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.8.0/omni-cache-darwin-amd64.tar.gz"
+      sha256 "06b01238d3331decf6641afff709df07774b2656afcf754f0533faa5438698f2"
 
       def install
         bin.install "omni-cache"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.7.0/omni-cache-darwin-arm64.tar.gz"
-      sha256 "72e798ff93190e8415d17416d6ef973e106c8a373fed6c36b807e93f467b64b3"
+      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.8.0/omni-cache-darwin-arm64.tar.gz"
+      sha256 "adb14bc94a6097373adda70c5d6c597b890bbd8f935b7a2e31710fa7519d6144"
 
       def install
         bin.install "omni-cache"
@@ -29,22 +29,22 @@ class OmniCache < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.7.0/omni-cache-linux-amd64.tar.gz"
-      sha256 "b682c4a795e78f7a110ab9f9ec758df20b7d921c981843b3fbebb5292599c357"
+      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.8.0/omni-cache-linux-amd64.tar.gz"
+      sha256 "1b2a3e3b7c2e801d4b7a1589ded2ccab272ab28d9c0510acd4c40dd9c558076a"
       def install
         bin.install "omni-cache"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.7.0/omni-cache-linux-arm.tar.gz"
-      sha256 "032a443d58c7938a53c846f3e5daee7ae846d4495f536918f68432cc69ea9249"
+      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.8.0/omni-cache-linux-arm.tar.gz"
+      sha256 "9d039d2ff235d6c24ae24b9df70084a2e8ef8ae8e91917aed13b19293bfcd98e"
       def install
         bin.install "omni-cache"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.7.0/omni-cache-linux-arm64.tar.gz"
-      sha256 "01839645f75afc9143ca36f59b752e0782931a961c4b3d9b5d5d4ed7fb0ff259"
+      url "https://github.com/cirruslabs/omni-cache/releases/download/v0.8.0/omni-cache-linux-arm64.tar.gz"
+      sha256 "7848f51124687ed08958b01df8deeb0f320c1520b0da21fa6d9cec7e282b041a"
       def install
         bin.install "omni-cache"
       end
