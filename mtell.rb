@@ -5,12 +5,12 @@
 class Mtell < Formula
   desc "CLI to tell a machine to do something over VNC"
   homepage "https://github.com/cirruslabs/mtell"
-  version "0.4.0"
+  version "0.4.1"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/cirruslabs/mtell/releases/download/0.4.0/mtell-darwin-amd64.tar.gz"
-    sha256 "20593be83588d6d0bbd25c4137e3a9e3f5160bbd0cb869f3148ca5ac589fe46d"
+    url "https://github.com/cirruslabs/mtell/releases/download/0.4.1/mtell-darwin-amd64.tar.gz"
+    sha256 "e6a54a8de54e18b950d862ee71d22f077e008d61cdd9eb849ddf5d441b9b6514"
 
     define_method(:install) do
       bin.install "mtell"
@@ -18,8 +18,8 @@ class Mtell < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/cirruslabs/mtell/releases/download/0.4.0/mtell-darwin-arm64.tar.gz"
-    sha256 "2c9cc4432599801bd075352f236ea31f539cad2799a4e35ce62ba24320e0eee2"
+    url "https://github.com/cirruslabs/mtell/releases/download/0.4.1/mtell-darwin-arm64.tar.gz"
+    sha256 "ea33559f2173fd463ab381f7d3f70716a7c6b1b442bd363103ccf0a5fe2869d9"
 
     define_method(:install) do
       bin.install "mtell"
