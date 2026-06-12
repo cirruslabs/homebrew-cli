@@ -19,7 +19,9 @@ class Tart < Formula
     bin.write_exec_script "#{libexec}/tart.app/Contents/MacOS/tart"
   end
 
-  depends_on :macos => :ventura
+  on_macos do
+    depends_on macos: :ventura
+  end
   def post_install
     generate_completions_from_executable(libexec/"tart.app/Contents/MacOS/tart", "--generate-completion-script")
   end
