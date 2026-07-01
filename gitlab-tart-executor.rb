@@ -8,7 +8,6 @@ class GitlabTartExecutor < Formula
   version "1.28.0"
 
   depends_on "cirruslabs/cli/tart"
-  depends_on :macos
 
   if Hardware::CPU.arm?
     url "https://github.com/cirruslabs/gitlab-tart-executor/releases/download/1.28.0/gitlab-tart-executor-darwin-arm64.tar.gz"

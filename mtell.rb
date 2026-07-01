@@ -6,7 +6,6 @@ class Mtell < Formula
   desc "CLI to tell a machine to do something over VNC"
   homepage "https://github.com/cirruslabs/mtell"
   version "0.4.2"
-  depends_on :macos
 
   if Hardware::CPU.intel?
     url "https://github.com/cirruslabs/mtell/releases/download/0.4.2/mtell-darwin-amd64.tar.gz"
