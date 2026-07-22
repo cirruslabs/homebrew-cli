@@ -15,7 +15,9 @@ class Softnet < Formula
     bin.install "softnet"
   end
 
-  depends_on :macos => :sequoia
+  on_macos do
+    depends_on :macos => :sequoia
+  end
 
   def caveats
     <<~EOS
