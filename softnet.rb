@@ -6,7 +6,7 @@ class Softnet < Formula
   desc "Software networking with isolation for Tart"
   homepage "https://github.com/cirruslabs/softnet"
   version "0.19.0"
-  depends_on :macos
+  depends_on macos: :sequoia
 
   url "https://github.com/cirruslabs/softnet/releases/download/0.19.0/softnet.tar.gz"
   sha256 "1612e1296834aae0b6389650c7c5190add1ee8d71474e328691e67679ecda53c"
@@ -14,8 +14,6 @@ class Softnet < Formula
   define_method(:install) do
     bin.install "softnet"
   end
-
-  depends_on :macos => :sequoia
 
   def caveats
     <<~EOS
