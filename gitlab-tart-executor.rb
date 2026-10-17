@@ -7,7 +7,7 @@ class GitlabTartExecutor < Formula
   homepage "https://github.com/cirruslabs/gitlab-tart-executor"
   version "1.28.0"
 
-  depends_on "cirruslabs/cli/tart"
+  depends_on "openai/tools/tart"
   depends_on :macos
 
   if Hardware::CPU.arm?

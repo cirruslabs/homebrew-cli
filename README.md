@@ -8,10 +8,19 @@ brew install cirruslabs/cli/<product name>
 
 List of availbale products:
 
-- `tart` for [Tart Virtualization](https://github.com/cirruslabs/tart).
 - `cirrus` for [Cirrus CLI](https://github.com/cirruslabs/cirrus-cli).
-- `orchard` for [Orchard Orchestration](https://github.com/cirruslabs/orchard).
 - `gitlab-tart-executor` for [GitLab Tart Executor](https://github.com/cirruslabs/gitlab-tart-executor).
+
+## Tart, Softnet and Orchard have moved
+
+`tart`, `softnet`, `orchard` and `tart-guest-agent` are now published to the
+[`openai/tools`](https://github.com/openai/homebrew-tools) tap:
+
+```bash
+brew install openai/tools/tart
+```
+
+Existing installs from this tap are migrated automatically on `brew update`.
 
 ## Reverting to a previous version
 
