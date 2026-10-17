@@ -11,7 +11,7 @@ cask "chamber" do
 
   binary "chamber"
   depends_on formula: [
-      "cirruslabs/cli/tart",
+      "openai/tools/tart",
     ]
 
   on_macos do
