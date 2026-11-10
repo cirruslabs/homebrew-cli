@@ -1,0 +1,6 @@
+{
+  "orchard": "openai/tools",
+  "softnet": "openai/tools",
+  "tart": "openai/tools",
+  "tart-guest-agent": "openai/tools"
+}
