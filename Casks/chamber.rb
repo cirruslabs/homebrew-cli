@@ -10,6 +10,7 @@ cask "chamber" do
   end
 
   binary "chamber"
+  depends_on :macos
   depends_on formula: [
       "openai/tools/tart",
     ]
